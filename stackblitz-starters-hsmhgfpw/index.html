@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Example</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, auto); /* Creates 3 equal columns */
+        grid-template-rows: auto;
+        gap: 20px; /* Space between grid items */
+        padding: 20px;
+        background-color: #f3f3f3;
+      }
+
+      .grid-item:nth-child(3) {
+        grid-row: span 2;
+      }
+      .grid-item {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+      }
+      .grid-container:hover {
+        background-color: #ddd;
+      }
+      .grid-item:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      .grid-item:nth-child(odd) {
+        background-color: #ff5722;
+      }
+      .grid-item:nth-child(even) {
+        background-color: #2196f3;
+      }
+      /* Positioning specific items */
+      .item1 {
+        grid-column: span 2; /* Item spans 2 columns */
+        grid-row: span 2; /* Item spans 2 columns */
+      }
+      .item4 {
+        grid-row: span 2; /* Item spans 2 rows */
+      }
+      .main {
+        grid-column: span 2;
+        grid-row: span 5;
+      }
+      .menu {
+        grid-row: span 4;
+      }
+      .chat {
+        grid-row: span 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item main">
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+        MAIN CONTENT<br />
+      </div>
+      <div class="grid-item menu">MENU</div>
+      <div class="grid-item chat">annoying chat box</div>
+      <div class="grid-item thing1">thing1</div>
+      <div class="grid-item thing2">thing2</div>
+    </div>
+  </body>
+</html>
