@@ -259,7 +259,7 @@ textarea:focus{
 }
 label{
     padding: 10px;
-    text-align: right;
+    text-align: left;
 }
 #mySubmit{
     width: 10rem;
